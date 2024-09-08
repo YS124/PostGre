@@ -8,7 +8,7 @@ sudo apt-get install -y postgresql postgresql-contrib
 sudo service postgresql start
 
 # Set password for the postgres user
-sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'yourpassword';"
+sudo -u postgres psql -c "ALTER USER postgres PASSWORD potato;"
 
 # Create a new database
 sudo -u postgres createdb mydatabase
