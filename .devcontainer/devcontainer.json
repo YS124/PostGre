@@ -1,5 +1,20 @@
 {
-  "name": "PostgreSQL Development Environment",
+  "name": "PostgreSQL Django Development Environment",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "postCreateCommand": "bash .devcontainer/setup.sh"
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.10"  // You can specify the Python version you need
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "forwardPorts": [8000],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",      // Python extension for better development experience
+        "ms-azuretools.vscode-docker" // Docker extension (optional if using Docker)
+      ]
+    }
+  }
 }
+
